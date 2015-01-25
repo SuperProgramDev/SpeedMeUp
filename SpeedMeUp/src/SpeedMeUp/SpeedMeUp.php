@@ -23,10 +23,10 @@ class SpeedMeUp extends PluginBase implements Listener{
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
 		if($this->config->exists("speedup") AND $this->config->get("speedup") !== array() and $this->config->exists("swim") ){
 			$this->speedup =  $this->config->get("speedup");
-			$this->getLogger()->info(TextFormat::DARK_GREEN . "加速方块：".$this->speedup ."!");
+			$this->getLogger()->info(TextFormat::DARK_GREEN . "SpeedUpBlock:".$this->speedup ."!");
 		}else{
 		$this->speedup= Item::DOOR_BLOCK;
-		$this->getLogger()->info(TextFormat::DARK_RED . "加速方块未设置，已改为".Item::DOOR_BLOCK."!");
+		$this->getLogger()->info(TextFormat::DARK_RED . "SpeedUpBlock in unseted, changed into:".Item::DOOR_BLOCK."!");
 		$this->config->set("speedup",Item::DOOR_BLOCK);
 		$this->config->save();
 		}
