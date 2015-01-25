@@ -1,0 +1,8 @@
+name: SpeedMeUp
+version: 1.0.0
+api: [1.0.0]
+author: Zzm
+description: Speed Me Up
+main: SpeedMeUp\SpeedMeUp
+
+commands:
